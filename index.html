@@ -162,7 +162,7 @@
                 <p class="novisible">.</p>
                 <div class="container contact-form">
                     <div class="contact-image ; heartbeat">
-                        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+                        <img src="https://cdn.dribbble.com/users/1787323/screenshots/13932356/media/2a2f5f4bbf5fc9531ddb39660122e972.png?compress=1&resize=1000x750" alt="rocket_contact"/>
                     </div>
                     <form id="contact__form" method="post">
                         <h3 class="contact__title"> Dejanos un mensaje </h3>
@@ -177,9 +177,11 @@
                                 <div class="form-group">
                                     <input type="text" id="Numero" name="Numero" class="form-control" placeholder="Tú número de celular *" value="" /><br>
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" class="btnContact" value="Enviar"/>
-                                </div>
+                                <!--button-->
+                                    <div class="form-group">
+                                        <input type="submit" id="btnContact" value="Enviar"/>
+                                    </div>
+                                <!---------->
                             </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -240,7 +242,7 @@
                         <!-- Grid column -->
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 ; secciones">
                             SECCIONES
                             </h6>
 
@@ -255,15 +257,17 @@
                         <!-- Grid column -->
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 ; contacto">
                             Contacto
                             </h6>
-                            <p><i class="fas fa-home me-3"></i> Cabildo 1365, CABA, BSAS</p>
-                            <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@playmaker.com
-                            </p>
-                            <p><i class="fas fa-phone me-3"></i> 4525 - 6262</p>
+                            <div class="contact__info">
+                                <p><i class="fas fa-home me-3"></i> Cabildo 1365, CABA, BSAS</p>
+                                <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                info@playmaker.com
+                                </p>
+                                <p><i class="fas fa-phone me-3"></i> 4525 - 6262</p>
+                            </div>
                         </div>
                         <!-- Grid column -->
                         </div>
@@ -275,7 +279,7 @@
                     <!-- Copyright -->
                     <div class="text-center p-4 ; footer__cr" style="background-color: rgba(0, 0, 0, 0.05);">
                     © 2021 Copyright:
-                    <a class="text-reset fw-bold" href="https://www.linkedin.com/in/barbara-bielicki-/">Bárbara R. Bielicki</a>
+                    <a class="text-reset fw-bold" href="https://www.linkedin.com/in/barbara-bielicki-/"><i class="fab fa-whatsapp"></i>Bárbara R. Bielicki</a>
                     </div>
                     <!-- Copyright -->
                 </footer>
@@ -287,8 +291,8 @@
     </div>
 
 <!--JQuery-->
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!--Mi Script-->
 <script src="./assets/pages/script.js"></script>
 <script type="text/javascript">mostrarFrases(); </script>

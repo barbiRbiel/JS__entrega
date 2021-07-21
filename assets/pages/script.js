@@ -1,5 +1,4 @@
-// FRASES ALEATORIAS AL INICIO DE LA PAGINA:
-
+// FRASES ALEATORIAS  [[[ SECTION HOME ]]]
     //Declaro la variable con array
     const frasesAleatorias=new Array()
 
@@ -25,7 +24,7 @@
     }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// INPUT DONDE EL USUARIO INGRESA EL NOMBRE POR EL CUAL QUIERE QUE LO LLAMEMOS:
+// INPUT DONDE EL USUARIO INGRESA EL NOMBRE POR EL CUAL QUIERE QUE LO LLAMEMOS:  [[[ SECTION HOME - GAME ]]]
 
     let ingresaNombre = document.getElementById("home__form"); //seccion del form
     ingresaNombre.addEventListener("submit", nombreIngresado); //input donde el usuario ingresa el nombre
@@ -42,29 +41,8 @@
         localStorage.getItem("nombreUsuario"); //local storage get item
     }
 
-//---------------------------------------------------------------------------------------------------------------
-//---------------------------------------------------CONTACTO FORM:------------------------------------------------------------
-const contactForm = document.forms["contact__form"];
-
-contactForm.onsubmit = (event) => {
-    event.preventDefault();
-    console.log(contactFormData());
-};
-
-function contactFormData(){
-    const contactUser = {};
-    Array.from(contactForm.elements).forEach(element => {
-        if(element.name) contactUser[element.name] = element.value 
-        })
-        return contactUser;
-}
-
-console.log(contactFormData());
-
-//---------------------------------------------------------------------------------------------------------------
-
-//-------------------------------ENTREGA FINAL TODO RENOVADO------------------------------------------------------------------------------------------------------------
-//funcion del nombre de las herramientas y a quien le gana esta herramienta
+//-------------------------------[[[ SECTION GAME ]]]------------------------------------------------------------------------------------------------------------
+//Funcion del nombre de las herramientas y a quien le gana esta herramienta
 function Jugada(nombre, gano){
     this.nombre = nombre;
     this.gano = gano;
@@ -95,4 +73,35 @@ $(document).ready(function(){
 
     });
 
+});
+
+//---------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------[[[ SECTION CONTACT ]]]------------------------------------------------------------
+//Form contacto:
+const contactForm = document.forms["contact__form"]; 
+
+contactForm.onsubmit = (event) => {
+    event.preventDefault();
+    console.log(contactFormData());
+};
+
+function contactFormData(){
+    const contactUser = {};
+    Array.from(contactForm.elements).forEach(element => {
+        if(element.name) contactUser[element.name] = element.value 
+        })
+        return contactUser;
+}
+
+console.log(contactFormData()); // Datos ingresados por el usuarioal form los puedo visualizar en mi consola.
+
+//URL declarada
+const URL = "https://jsonplaceholder.typicode.com/posts";
+//Declaramos la información a enviar
+const infoPost = {Juego: "Piedra, papel o tijera"};
+//evento click del boton
+$("#btnContact").click(() => {
+    $.post(URL, infoPost, (data) => {
+    console.log(data);
+    });
 });

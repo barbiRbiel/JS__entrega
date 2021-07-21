@@ -5,14 +5,17 @@ body{overflow-x: hidden;}
     overflow-y: scroll;
     height: 100vh;
     overflow-x: hidden;
-    background-color: #111132;
+    background-image: url(../img/aboutcontact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0062cc;
 }
 section{
     scroll-snap-align: start;
 }
 
 /*RESPONSIVE | MOBILE */
-/*navbar*/
+/*navbar*/ /*background-color: #111132;*/
 nav{
     background-color: #111132;
 }
@@ -88,7 +91,7 @@ nav{
 }
 .hero-button:hover {
     background-color: #9048D9;
-    color: #23104C;
+    color: white;
     border: 1px solid #db7598;
 }
 .heartbeat{
@@ -155,6 +158,7 @@ nav{
 .game__profile {
     width: 170px;
     align-self: center;
+
 }
 
 #inputIngresado{
@@ -443,7 +447,7 @@ footer{
         font-size: 58px;
         margin-top: 10vh;
     }
-    .game__profile {width: 170px;}
+    .game__profile {width: 170px; margin-bottom: 1vh;}
     #inputIngresado{
         margin-bottom: 3vh;
         font-size: 30px;
@@ -529,6 +533,7 @@ footer{
     ul.timeline {
         margin-top: 10vh;
         margin-bottom: 10vh;
+        margin-left:9vh;
         list-style-type: none;
         position: relative;
         padding-left: 1.5rem;
@@ -601,7 +606,8 @@ footer{
         background-color: rgba(255, 255, 255, 0);
     }
     .contact-form{
-        background: #fff;
+        background: #0063cc38;
+        border-radius: 180px 100px 180px 100px;
         margin-top: 3vh;
         margin-bottom: 1%;
         width: 70%;
@@ -628,11 +634,11 @@ footer{
         margin-bottom: 8%;
         margin-top: -10%;
         text-align: center;
-        color: #0b4685;
+        color: white;
         font-family: 'Kirang Haerang', cursive;
         font-size: 35px;
     }
-    .contact-form .btnContact {
+    .contact-form #btnContact {
         margin-top: 5vh;
         width: 50%;
         border: none;
@@ -643,7 +649,7 @@ footer{
         color: #fff;
         cursor: pointer;
     }
-    .contact-form .btnContact:hover {
+    .contact-form #btnContact:hover {
         background-color: #23104C;
     }
     .btnContactSubmit{
@@ -656,111 +662,17 @@ footer{
         cursor: pointer;
     }
 
-    /*SHARE*/
-    
-.parent-wrapper {
-    position: relative;
-    width: 1400px;
-    height: 230px;
-    margin: 40px auto 0;
-   
-    background-color: #000;
-    border-radius: 4px;
-    color: #FFF;
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
-}
-
-  .close-btn {
-    margin: 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .subscribe-wrapper {
-    position: absolute;
-    left: -30px;
-    right: -30px;
-    height: 200px;
-    padding: 30px;
-    
-    background-position-x: 272%;
-    background-position-y: -1px;
-    background-repeat: no-repeat;
-    background-color: #FFF;
-    border-radius: 4px;
-    color: #333;
-    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
-  }
-  
-  .subscribe-wrapper:after {
-    position: absolute;
-    content: "";
-    right: -10px;
-    bottom: 71px;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #7149c7;
-  }
-  
-  .subscribe-wrapper h4 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    line-height: 28px;
-  }
-  
-  .subscribe-wrapper input {
-    position: absolute;
-    bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #d4d4d4;
-    padding: 10px;
-    width: 65%;
-    background: transparent;
-    transition: all .25s ease;
-  }
-  
-  .subscribe-wrapper input:focus {
-    outline: none;
-    border-bottom: 1px solid #a77cf4;
-  }
-  
-  .subscribe-wrapper #submit-btn {
-    position: absolute;
-    border-radius: 30px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    background-color: #a77cf4;
-    color: #FFF;
-    padding: 12px 25px;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    right: -10px;
-    bottom: 30px;
-    cursor: pointer;
-    transition: all .25s ease;
-    box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
-  }
-  
-  .subscribe-wrapper #submit-btn:hover {
-    background-color: #8e62dc;
-  }
-
 
     /*  FOOTER  */
     footer{
-        background-image: url(../img/section1.png);
+        background-color: #0063cc23;
     }
     .footer__social{
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         margin-left: 33vh;
+        text-shadow: 1px 1px 1px black;
     }
     .footer__logo{
         width: 190px;
@@ -768,8 +680,8 @@ footer{
     .footer__about{
         font-family: 'Montserrat', sans-serif;
         font-size: 14px;
-        color: #9148d9;
-        text-shadow: 1px 1px 1px black;
+        color: rgb(106, 235, 235);
+        text-shadow: 1px 1px 2px black;
     }
     .footer__social--icon{
         width: 30px;
@@ -781,16 +693,36 @@ footer{
     .text-reset:hover{
         color: white;
     }
-    .footer__link:hover{
+    .footer__link{
         color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .footer__link:hover{
+        color: #23104C;
+    }
+    .secciones{
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 23px;
+    }
+    .contacto{
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 23px;
     }
     .footer__cr{
         font-family: 'Montserrat', sans-serif;
+        color: rgb(106, 235, 235);
+        text-shadow: 1px 1px 2px black;
     }
     .footer__cr:hover{
         color: #9048D9;
         font-size: 16px;
         text-shadow: 1px 1px 1px black;
+    }
+    .contact__info{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
     }
 }
 
